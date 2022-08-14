@@ -66,24 +66,24 @@ jobs:
         path: C:\Users\runneradmin\AppData\Roaming\local\bin\wstunnel.exe
       
       
-  build-macos:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
+#   build-macos:
+#     runs-on: macos-latest
+#     steps:
+#     - uses: actions/checkout@v2
       
-#    - name: Install stack
-#      run: |
-#        curl -sSL https://get.haskellstack.org/ | sh
+# #    - name: Install stack
+# #      run: |
+# #        curl -sSL https://get.haskellstack.org/ | sh
         
-    - name: Setup GHC
-      run: |
-        stack setup
+#     - name: Setup GHC
+#       run: |
+#         stack setup
         
-    - name: Build
-      run: |
-        stack install
+#     - name: Build
+#       run: |
+#         stack install
         
-    - uses: actions/upload-artifact@v1
-      with:
-        name: wstunnel-macos
-        path: /Users/runner/.local/bin/wstunnel
+#     - uses: actions/upload-artifact@v1
+#       with:
+#         name: wstunnel-macos
+#         path: /Users/runner/.local/bin/wstunnel
