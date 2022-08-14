@@ -30,12 +30,12 @@ jobs:
         id: docker_build_wstunnel
         uses: docker/build-push-action@v2
         with:
-          push: ${{ github.repository == 'erebe/wstunnel' && github.ref == 'refs/heads/master' }}
-          tags: ghcr.io/erebe/wstunnel:latest
+          push: ${{ github.repository == 'blogmpw1/wstunnel' && github.ref == 'refs/heads/master' }}
+          tags: ghcr.io/blogmpw1/wstunnel:latest
        
       - name: extract Artifact
         run: |
-          docker run --rm -v $(pwd):/data ghcr.io/erebe/wstunnel:latest /bin/cp /wstunnel /data/
+          docker run --rm -v $(pwd):/data ghcr.io/blogmpw1/wstunnel:latest /bin/cp /wstunnel /data/
           ./wstunnel
 
       - uses: actions/upload-artifact@v1
